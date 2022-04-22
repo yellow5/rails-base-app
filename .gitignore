@@ -54,4 +54,5 @@ node_modules
 *.local
 
 # Ignore uncategorized files
+*.swp
 .DS_Store
