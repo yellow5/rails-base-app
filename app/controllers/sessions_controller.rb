@@ -4,6 +4,7 @@ class SessionsController < Devise::SessionsController
   private
 
   def respond_with(resource, _opts = {})
+    logger.debug "[DEBUG] JSON API session thing..."
     render jsonapi: resource
   end
 

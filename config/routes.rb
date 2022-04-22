@@ -12,6 +12,10 @@ Rails.application.routes.draw do
                        registrations: 'registrations'
                      }
 
+  namespace :api do
+    resources :greetings, only: [:index, :create]
+  end
+
   root to: 'application#website'
   get '/panel(/*path)', to: 'application#panel', as: :panel
   get '/(*path)', to: 'application#website', as: :website
